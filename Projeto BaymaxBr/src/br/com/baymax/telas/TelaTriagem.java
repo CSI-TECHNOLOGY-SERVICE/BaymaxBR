@@ -274,10 +274,12 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion02.png"))); // NOI18N
         jLabel2.setText("jLabel2");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.setMaximumSize(new java.awt.Dimension(53, 53));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion03.png"))); // NOI18N
         jLabel4.setText("jLabel2");
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel4.setMaximumSize(new java.awt.Dimension(53, 53));
 
         buttonGroup2.add(rbt05);
@@ -292,12 +294,15 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion4.png"))); // NOI18N
         jLabel5.setText("jLabel2");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel5.setMaximumSize(new java.awt.Dimension(53, 53));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion01.png"))); // NOI18N
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion5.png"))); // NOI18N
         jLabel7.setText("jLabel2");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel7.setMaximumSize(new java.awt.Dimension(53, 53));
 
         buttonGroup2.add(rbt01);
@@ -382,6 +387,7 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion06.png"))); // NOI18N
         jLabel8.setText("jLabel2");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.setMaximumSize(new java.awt.Dimension(53, 53));
 
         buttonGroup2.add(rbt07);
@@ -396,18 +402,22 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion7.png"))); // NOI18N
         jLabel9.setText("jLabel2");
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel9.setMaximumSize(new java.awt.Dimension(53, 53));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion8.png"))); // NOI18N
         jLabel10.setText("jLabel2");
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel10.setMaximumSize(new java.awt.Dimension(53, 53));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion9.png"))); // NOI18N
         jLabel11.setText("jLabel2");
+        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel11.setMaximumSize(new java.awt.Dimension(53, 53));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/emotion10.png"))); // NOI18N
         jLabel12.setText("jLabel2");
+        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel12.setMaximumSize(new java.awt.Dimension(53, 53));
 
         jLabel13.setFont(new java.awt.Font("Orbitron", 0, 14)); // NOI18N
@@ -539,12 +549,13 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
                             .addComponent(rbt08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rbt07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rbt09, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         painelSintoma1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelSintoma1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         buttonGroup4.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -629,9 +640,17 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23))
         );
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 255));
+        jButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Salvar");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 255));
+        jButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Imprimir");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
