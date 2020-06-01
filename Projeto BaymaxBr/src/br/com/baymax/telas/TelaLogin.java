@@ -224,9 +224,9 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnNovoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoCadastroActionPerformed
-        // TODO add your handling code here:
-     { TelaCadastroUsuario cadastroUse = new TelaCadastroUsuario(); 
-     cadastroUse.setVisible(true); dispose(); }
+        
+      TelaCadastroUsuario cadastroUse = new TelaCadastroUsuario(); 
+     cadastroUse.setVisible(true); dispose(); 
         
 
     }//GEN-LAST:event_btnNovoCadastroActionPerformed
