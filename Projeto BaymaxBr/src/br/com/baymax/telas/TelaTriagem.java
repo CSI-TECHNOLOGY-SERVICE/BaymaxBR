@@ -14,18 +14,12 @@ import javax.swing.JOptionPane;
  */
 public class TelaTriagem extends javax.swing.JInternalFrame {
 
-    
-    
-    
-    
     /**
      * Creates new form TelaTriagem
      */
     public TelaTriagem() {
         initComponents();
-        
-        
-        
+
     }
 
     /**
@@ -96,10 +90,10 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
         btnInformacoes = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         rbtHipertemia = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
-        jRadioButton17 = new javax.swing.JRadioButton();
+        rbtFebreAlta = new javax.swing.JRadioButton();
+        rbtFebre = new javax.swing.JRadioButton();
+        rbtNormal = new javax.swing.JRadioButton();
+        rbtHipotermia = new javax.swing.JRadioButton();
         jLabel18 = new javax.swing.JLabel();
         lblTemperatura = new javax.swing.JLabel();
 
@@ -227,7 +221,7 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
                 .addGap(53, 53, 53)
                 .addComponent(jLabel15)
                 .addGap(18, 18, 18)
-                .addComponent(lblResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -614,7 +608,7 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
         btnInformacoes.setBackground(new java.awt.Color(0, 0, 255));
         btnInformacoes.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btnInformacoes.setForeground(new java.awt.Color(255, 255, 255));
-        btnInformacoes.setText("Informações sobre febre");
+        btnInformacoes.setText("CUIDADOS COM FEBRE E FALTA DE AR");
         btnInformacoes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInformacoes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -636,15 +630,18 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
             .addGroup(painelSintoma1Layout.createSequentialGroup()
                 .addGroup(painelSintoma1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelSintoma1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel14))
+                        .addGroup(painelSintoma1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelSintoma1Layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel14))
+                            .addGroup(painelSintoma1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jRadioButton1)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(painelSintoma1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jRadioButton1))
-                    .addGroup(painelSintoma1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(btnInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnInformacoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         painelSintoma1Layout.setVerticalGroup(
             painelSintoma1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -676,17 +673,37 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
             }
         });
 
-        buttonGroup5.add(jRadioButton14);
-        jRadioButton14.setText("39.6ºC -> 41ºC");
+        buttonGroup5.add(rbtFebreAlta);
+        rbtFebreAlta.setText("39.6ºC -> 41ºC");
+        rbtFebreAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtFebreAltaActionPerformed(evt);
+            }
+        });
 
-        buttonGroup5.add(jRadioButton15);
-        jRadioButton15.setText("37.6º -> 39.5ºC");
+        buttonGroup5.add(rbtFebre);
+        rbtFebre.setText("37.6º -> 39.5ºC");
+        rbtFebre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtFebreActionPerformed(evt);
+            }
+        });
 
-        buttonGroup5.add(jRadioButton16);
-        jRadioButton16.setText("36º  -> 37.5ºC");
+        buttonGroup5.add(rbtNormal);
+        rbtNormal.setText("36º  -> 37.5ºC");
+        rbtNormal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtNormalActionPerformed(evt);
+            }
+        });
 
-        buttonGroup5.add(jRadioButton17);
-        jRadioButton17.setText("35º ou Menos");
+        buttonGroup5.add(rbtHipotermia);
+        rbtHipotermia.setText("35º ou Menos");
+        rbtHipotermia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtHipotermiaActionPerformed(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel18.setText("Sua Temperatura ?");
@@ -704,10 +721,10 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rbtHipertemia)
-                            .addComponent(jRadioButton14)
-                            .addComponent(jRadioButton15)
-                            .addComponent(jRadioButton16)
-                            .addComponent(jRadioButton17)
+                            .addComponent(rbtFebreAlta)
+                            .addComponent(rbtFebre)
+                            .addComponent(rbtNormal)
+                            .addComponent(rbtHipotermia)
                             .addComponent(jLabel18))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -720,13 +737,13 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
                 .addGap(13, 13, 13)
                 .addComponent(rbtHipertemia)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton14)
+                .addComponent(rbtFebreAlta)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton15)
+                .addComponent(rbtFebre)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton16)
+                .addComponent(rbtNormal)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton17)
+                .addComponent(rbtHipotermia)
                 .addGap(18, 18, 18)
                 .addComponent(lblTemperatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -759,8 +776,7 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(painelSintoma1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
 
@@ -820,18 +836,18 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
 
     private void rbt07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt07ActionPerformed
         // TODO add your handling code here:
-         lblEscala.setText("Vejo que você requer cuidados imediatos");
+        lblEscala.setText("Vejo que você requer cuidados imediatos");
     }//GEN-LAST:event_rbt07ActionPerformed
 
     private void rbt09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt09ActionPerformed
         // TODO add your handling code here:
-         lblEscala.setText("Procure uma unidade especizlida de imediatos");
-         lblEscala.setForeground(Color.red);
+        lblEscala.setText("Procure uma unidade especizlida de imediatos");
+        lblEscala.setForeground(Color.red);
     }//GEN-LAST:event_rbt09ActionPerformed
 
     private void rbt10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt10ActionPerformed
         // TODO add your handling code here:
-         lblEscala.setText("Você precisa se encaminhado para unidade especializada urgente ");
+        lblEscala.setText("Você precisa se encaminhado para unidade especializada urgente ");
     }//GEN-LAST:event_rbt10ActionPerformed
 
     private void rbt08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt08ActionPerformed
@@ -841,10 +857,8 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
         // TODO add your handling code here:
-        
-         
-         
-         
+
+
     }//GEN-LAST:event_formInternalFrameOpened
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
@@ -874,18 +888,47 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
 
     private void rbtHipertemiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtHipertemiaActionPerformed
         // TODO add your handling code here:
-       lblTemperatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/hipertemia.png")));
-       JOptionPane.showMessageDialog(null,"Procure a unidade Hospitalar com Urgência");
+        lblTemperatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/hipertemia.png")));
+        JOptionPane.showMessageDialog(null, "Procure a unidade Hospitalar com Urgência");
     }//GEN-LAST:event_rbtHipertemiaActionPerformed
 
     private void btnInformacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformacoesActionPerformed
-       
-        TelaTeste teste = new TelaTeste();
-        teste.setVisible(true);
-        
-        
-        
+
+        TelaInforme informe = new TelaInforme();
+        informe.setVisible(true);
+
+
     }//GEN-LAST:event_btnInformacoesActionPerformed
+
+    private void rbtFebreAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtFebreAltaActionPerformed
+        // TODO add your handling code here:
+        lblTemperatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/febre alta.png")));
+        JOptionPane.showMessageDialog(null, "Seus status inspira cuidados !!! ");
+    }//GEN-LAST:event_rbtFebreAltaActionPerformed
+
+    private void rbtFebreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtFebreActionPerformed
+        // TODO add your handling code here:
+        lblTemperatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/febre.png")));
+    }//GEN-LAST:event_rbtFebreActionPerformed
+
+    private void rbtNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtNormalActionPerformed
+        // TODO add your handling code here:
+        lblTemperatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/normal.png")));
+    }//GEN-LAST:event_rbtNormalActionPerformed
+
+    private void rbtHipotermiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtHipotermiaActionPerformed
+        // TODO add your handling code here:
+        lblTemperatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/baymax/imagens/hipotermia100x26.png")));
+        int response = JOptionPane.showConfirmDialog(this, "Sua situação é de emergêcia !!! DESEJA CHAMAR A UNIDADE DE SOCORRO ?", "EMERGÊCIA", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if(response == JOptionPane.YES_OPTION){
+            TelaEmergencia emergencia = new TelaEmergencia();
+        emergencia.setVisible(true);
+        }else{
+        }
+            
+        
+        
+    }//GEN-LAST:event_rbtHipotermiaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -927,10 +970,6 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton17;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
@@ -953,7 +992,11 @@ public class TelaTriagem extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton rbt08;
     private javax.swing.JRadioButton rbt09;
     private javax.swing.JRadioButton rbt10;
+    private javax.swing.JRadioButton rbtFebre;
+    private javax.swing.JRadioButton rbtFebreAlta;
     private javax.swing.JRadioButton rbtHipertemia;
+    private javax.swing.JRadioButton rbtHipotermia;
+    private javax.swing.JRadioButton rbtNormal;
     // End of variables declaration//GEN-END:variables
 
     void setMaximum() {
